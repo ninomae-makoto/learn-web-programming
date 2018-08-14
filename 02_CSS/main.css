@@ -1,0 +1,37 @@
+
+body {
+    /* 中央寄せ */
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+    color: rgba(128, 0, 128, 0.75);
+}
+
+#textarea1 {
+    border: 2px solid;
+}
+
+.form-class {
+    background-color: aliceblue;
+    margin: 20px;
+}
+
+ul li {
+    color: rgba(0,0,0, 0.5);
+}
+
+li:first-child {
+    font-weight: bolder;
+}
+
+button:hover {
+    padding: 10px;
+}
+
+table {
+    border: 1px solid;
+    margin: auto;
+}

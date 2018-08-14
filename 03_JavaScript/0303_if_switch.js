@@ -1,0 +1,84 @@
+
+var result = null
+
+console.log("")
+console.log(`-- 数値による条件分岐 -----------------`)
+var array = [1,2,3]
+if(array.length === 3) {
+    console.log("arrayのサイズは3")
+}
+if(array.length !== 0) {
+    console.log("arrayのサイズは0ではない")
+}
+if(array.length > 0) {
+    console.log("arrayのサイズは0より大きい")
+}
+if(array.length <= 3) {
+    console.log("arrayのサイズは3以下")
+}
+
+console.log("")
+console.log(`-- 文字列による条件分岐 -----------------`)
+var text = "Hello if and switch"
+if( text === "Hello if and switch") {
+    console.log("文字列の完全一致")
+}
+
+if( text.indexOf("Hello") !== -1) {
+    console.log("文字列が含まれているか検証するときに使う")
+}
+
+console.log("")
+console.log(`-- 空を判定する -----------------`)
+let isEmpty
+if( isEmpty ) {
+    console.log("not called")
+}
+isEmpty = 0
+if( isEmpty ) {
+    console.log("not called")
+}
+isEmpty = null
+if( isEmpty ) {
+    console.log("not called")
+}
+isEmpty = ""
+if( isEmpty ) {
+    console.log("not called")
+}
+isEmpty = 0 / 1
+if( isEmpty ) {
+    console.log("not called")
+}
+
+console.log("")
+console.log(`-- if else -----------------`)
+array = []
+if( array.length ) {
+    // nop
+} else {
+    console.log("条件に合わない場合呼ばれる")    
+}
+
+console.log("")
+console.log(`-- switch -----------------`)
+var MAIN = 0
+var SUB1 = 1
+var SUB2 = 2
+
+var scene = MAIN
+switch (scene) {
+    case MAIN:
+        console.log("MAINのシーン")
+        break;
+    case SUB1:
+        console.log("SUB1のシーン")
+        break;
+    case SUB2:
+        console.log("SUB2のシーン")
+        break;
+
+    default:
+        console.log("未定義のシーン")        
+        break;
+}
