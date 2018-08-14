@@ -40,7 +40,7 @@ open 01_HTML/011_base.html
 タブに表示される
 
 ## name="viewport" content="width=device-width, initial-scale=1
-ブラウザのviewport(レンダリング領域)を設定する。
+ブラウザのviewport(レンダリング領域)を設定する。  
 ブラウザはviewportにレンダリングしたあとディスプレイに拡大縮小して反映する。
 
 ## body
@@ -72,7 +72,7 @@ open 01_HTML/011_base.html
 ボタン
 
 ## form
-入力フォームを構成する。
+入力フォームを構成する。  
 form内の入力値を元にactionのURLに対してリクエストを投げる。
 
 ## ul li
@@ -82,7 +82,7 @@ form内の入力値を元にactionのURLに対してリクエストを投げる�
 
 
 # Emmetについて
-少ない入力でhtmlへ展開できる。
+少ない入力でhtmlへ展開できる。  
 タブかエンターで展開する
 
 ## htmlテンプレート作成

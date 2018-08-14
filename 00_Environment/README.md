@@ -15,7 +15,12 @@ LTSを推奨
 
 ## リポジトリからgit clone
 
+```
+git clone https://github.com/ninomae-makoto/learn-web-programming.git
+```
+
 ## Visual Studio Codeでcloneしてきたディレクトリを開く
+ファイル → フォルダを開く から
 
 ### 拡張機能の導入
 
