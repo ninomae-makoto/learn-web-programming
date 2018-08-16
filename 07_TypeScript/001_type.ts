@@ -33,56 +33,56 @@ console.log(type)
 // ---- interface ----
 // 商品
 interface Item {
-    /** 名前 */
-    name: string
-    /** 値段 */
-    price: number
-    /** 割引額 値を持たないケースあり */
-    discount?: number
+  /** 名前 */
+  name: string
+  /** 値段 */
+  price: number
+  /** 割引額 値を持たないケースあり */
+  discount?: number
 }
 
 // ?がついているものを除く全てのプロパティを宣言時に定義しないとエラーになる
 const apple: Item = {
-    name: "りんご",
-    price: 200,
+  name: "りんご",
+  price: 200,
 }
 // 配列及び連想配列はconstにしていても変更できてしまう。取り扱い注意。
 apple.name = "紅玉"
 console.log(apple)
 
 const orange: Item = {
-    name: "オレンジ",
-    price: 200,
-    discount: 100,
+  name: "オレンジ",
+  price: 200,
+  discount: 100,
 }
 console.log(orange)
 
 // ---- array ----
 const array: Item[] = [apple, orange]
 array.push({
-    name: "ぶどう",
-    price: 500,
+  name: "ぶどう",
+  price: 500,
 })
 console.log(array)
 
 // ---- 連想配列 ----
 const associativeSrray: { [key: string]: Item } = {
-    apple: apple,
-    orange: orange,
-  }
+  apple: apple,
+  orange: orange,
+}
 console.log(associativeSrray["apple"])
 
-// ---- function ----
-// number型のvalue1,2を引数にnumber型を返す関数の型
+// ---- function ----
+// number型のvalue1,2を引数にnumber型を返す関数の型
 const add: (value1: number, value2: number) => number =
- (value1: number, value2: number): number => {
+  (value1: number, value2: number): number => {
     return value1 + value2
-}
+  }
 console.log(add(4, 5))
 
 // 単純化すると以下
 const add2 = (value1: number, value2: number) => {
-    return value1 + value2
+  return value1 + value2
 }
 
 

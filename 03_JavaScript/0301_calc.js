@@ -67,4 +67,4 @@ console.log(`-- 演算順序確認 -----------------`)
 
 result = 1 / 2 * (3 + 4) - 5
 console.log(`1 / 2 * (3 + 4) - 5" = `)
-console.log(`0.5 * 7 - 5" = ${result}`)
+console.log(`0.5 * 7 - 5 = ${result}`)

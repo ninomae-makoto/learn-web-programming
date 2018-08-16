@@ -72,5 +72,5 @@ function factorial(n) {
   return result;
 }
 // 6! = 6 * 5 * 4 * 3 * 2 * 1
-console.log("10の階乗: " + factorial(6));
+console.log("6の階乗: " + factorial(6));
 

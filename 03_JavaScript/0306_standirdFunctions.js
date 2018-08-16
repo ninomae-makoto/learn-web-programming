@@ -124,11 +124,9 @@ console.log("Math.abs(4): " + Math.abs(4))
 
 // 最小値を取得する
 console.log("Math.min(-3, 3, 4, 1): " + Math.max(-3, 3, 4, 1))
-console.log("Math.min([-3, 3, 4, 1]): " + Math.max([-3, 3, 4, 1]))
 
 // 最大値を取得する
 console.log("Math.max(-5, 3, 4, 1): " + Math.max(-5, 3, 4, 1))
-console.log("Math.max([-5, 3, 4, 1]): " + Math.max([-5, 3, 4, 1]))
 
 // 小数点以下切上げ
 console.log("Math.ceil(-4.4): " + Math.ceil(-4.4))
