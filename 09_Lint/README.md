@@ -25,7 +25,7 @@ interfaceなどで足りない項目がある場合エラーになる。
 ×
 
 ``` ts
-const func function () {
+const func = function () {
   //
 }
 ```
