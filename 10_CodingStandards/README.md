@@ -122,7 +122,76 @@ tslintで弾く。
 ## switchは基本的に使用しない
 以下のようにする。
 
-TODO
+×
+
+``` js
+// 未初期化
+var UNINITIALIZED = 0
+// 準備完了
+var READY = 1
+// 読み込み中
+var LOADING = 2
+// 読み込み完了
+var LOADED = 3
+// 未初期化(0)〜ロード完了(3)までの状態を擬似的に取得
+var state = Math.floor(Math.random()*4)
+
+switch (state) {
+  case UNINITIALIZED:
+    console.log("未初期化")
+    break
+
+  case READY:
+    console.log("準備完了")
+    break
+
+  case LOADING:
+    console.log("読み込み中")
+    break
+
+  case LOADED:
+    console.log("読み込み完了")
+    break
+
+  default:
+    console.log("未定義の状態")
+    break
+}
+
+```
+
+以下のようにする。
+◯
+
+``` js
+// 未初期化
+var UNINITIALIZED = 0
+// 準備完了
+var READY = 1
+// 読み込み中
+var LOADING = 2
+// 読み込み完了
+var LOADED = 3
+// 未初期化(0)〜ロード完了(3)までの状態を擬似的に取得
+var state = Math.floor(Math.random()*4)
+var MAP = [
+  "未初期化",
+  "準備完了",
+  "読み込み中",
+  "読み込み完了",
+]
+
+if( state < MAP.length ) {
+  console.log(MAP[state])
+} else {
+  console.log("未定義の状態")
+}
+
+
+```
+
+添字が0から始まらない場合に連想配列を使用したり、値に処理を入れることもできる。
+処理が重厚になる場合はクラス化してもいい。
 
 例外は認める。
 
