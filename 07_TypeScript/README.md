@@ -2,12 +2,12 @@
 # TypeScriptについて
 
 JavaScriptによく似た型付き言語。
-JavaScriptへトランスパイル(変換)して使用する。
+JavaScriptへトランスパイル(変換)して使用する(TypeScriptはそのままではブラウザで解釈できないため)
 
 実行前に以下のコマンド
 
 ```
-cd 04_TypeScript/
+cd 07_TypeScript/
 ```
 
 TypeScriptをインストール(Nodeのインストールが必要)
