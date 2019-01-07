@@ -6,6 +6,9 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false,
+  },
   "files.insertFinalNewline": true,
   "debug.inlineValues": true,
   "editor.renderIndentGuides": true,

@@ -1,3 +1,7 @@
+# CSSとは
+Cascading Style Sheets.  
+Webの基本的な構成要素の一つ。  
+主に文書のデザインを記述する。
 
 # 動作確認
 
