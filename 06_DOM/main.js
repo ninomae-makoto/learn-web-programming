@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
   // クラスが文字列として取得できる
   console.log(header.className)
 
+  // リストを作成する
   var ul = document.createElement("ul")
   for (let i = 0; i < 5; i++) {
     var li = document.createElement("li")
@@ -30,7 +31,7 @@ window.addEventListener("load", function () {
   // 要素内部のHTML
   console.log(ul.innerHTML)
 
-  // javaScriptからjavaScript読み込む 読み込みタイミングに注意する必要がある。
+  // javaScriptからjavaScriptを読み込む 読み込みタイミングに注意する必要がある。
   var script = document.createElement('script')
   script.type = "text/javascript"
   script.src = "sub.js"

@@ -9,13 +9,13 @@ htmlファイルをブラウザ上で確認する。
 ## Windowsで開く
 
 ```
-06_DOM/06_base.html
+06_DOM/06_index.html
 ```
 
 ## MACで開く
 
 ```
-open 06_DOM/06_base.html
+open 06_DOM/06_index.html
 ```
 
 # DOMへのアクセス
