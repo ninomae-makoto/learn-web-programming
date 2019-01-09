@@ -51,3 +51,6 @@ letかconstを使用する。
 ## 未使用の変数は許可しない
 削除かコメントアウト。
 未使用の引数については `{}` を使用する。
+
+# 参考
+https://palantir.github.io/tslint/

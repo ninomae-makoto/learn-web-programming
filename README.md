@@ -52,11 +52,15 @@ JavaScriptについて基本的な構文を学ぶ
 ## 05_VisualStudioCode
 エディタについて学ぶ
 
+TODO: tasks.json について
+
 ## 06_DOM
 ライブラリに依存しないDOM操作について学ぶ
 
 ## 07_TypeScript
 型を導入してより安全に実装する。
+
+TODO: JavaScriptと比較できるように
 
 ## 08_Refactoring
 リファクタについて  
@@ -73,21 +77,34 @@ JavaScriptについて基本的な構文を学ぶ
 VisualStudioCodeのデバッグ機能  
 Chromeの開発者ツールの機能
 
+TODO: 未着手
+
 ## 12_UnitTest
 テストを書く
 
+TODO: 未着手
+
 ## 13_NPMScript
 
+TODO: 未着手
+
 ## 14_Webpack
+
+TODO: 未着手
 
 ## 15_Vue
 JavaScriptのUIフレームワークについて
 
 ## 16_VueElement
 
+TODO: 未着手
+
 ## 17_GuiTest(Karma)
 Karmaを使用して画面のテストを行う
+
+TODO: 未着手
 
 ## 18_Node.js&Express
 サーバサイドについて
 
+TODO: 未着手
