@@ -1,5 +1,4 @@
 
-var result = null
 
 console.log("")
 console.log(`-- hello関数 -----------------`)
@@ -14,60 +13,66 @@ hello()
 hello()
 
 // 関数は変数に入れることもできる。
-var hello2 = function hello2() {
+let hello2 = () => {
   console.log("Hello Method2")
 }
 hello2()
 
 console.log("")
 console.log(`-- 足し算をする関数 -----------------`)
-function add(arg1, arg2) {
+function add(arg1: number, arg2: number) {
   return arg1 + arg2
 }
 
 // 戻り値がある場合変数で受け取ることができる
-result = add(1, 2)
-console.log("result = add(1, 2): " + result)
-
+{
+  let result = null
+  result = add(1, 2)
+  console.log("result = add(1, 2): " + result)
+}
 // 戻り値を直接使うこともできる
 console.log("add(1, 2): " + add(1, 2))
 
 console.log("")
 console.log(`-- 引数に関数を渡す -----------------`)
 // 呼び出し元から操作を指定したいときなど
-function sum(array, onRunning) {
-  let sum = 0
-  for (let i = 0; i < array.length; i++) {
-    sum += array[i]
+// ?を付けると引数が省略可能になる
+function sum(array: number[], onRunning?: (progress: number) => void): number {
+  let total = 0
+  for (const value of array) {
+    total += value
     // onRunnning関数が渡されていたら実行
     if (onRunning) {
-      onRunning(sum)
+      onRunning(total)
     }
   }
-  return sum
+  return total
 }
 
-console.log("関数を渡さない")
-result = sum([1, 2, 3, 4, 5])
-console.log("result: " + result)
+{
+  let result: number
+  console.log("関数を渡さない")
+  result = sum([1, 2, 3, 4, 5])
+  console.log("result: " + result)
 
-console.log("関数を渡す")
-result = sum([1, 2, 3, 4, 5],
-  function (sum) {
-    console.log(sum)
-  })
-console.log("result: " + result)
+  console.log("関数を渡す")
+  result = sum([1, 2, 3, 4, 5],
+    (progress: number) => {
+      console.log(progress)
+    })
+  console.log("result: " + result)
+}
 
 
 console.log("")
 console.log(`-- 再帰関数 -----------------`)
 // 関数は自信を呼び出すこともできる 以下は階乗計算
-function factorial(n) {
-  var result = 0
+function factorial(n: number) {
+  let result = 0
   if (n > 0) {
     result = n * factorial(n - 1)
   } else {
-    result = 1; // 0! = 1
+    result = 1 // 0! = 1
   }
   return result
 }

@@ -29,14 +29,14 @@ console.log(`-- 配列を走査する -----------------`)
 var array = ["Hello", "for", "and", "while"]
 array.forEach(element => {
   console.log(element)
-});
+})
 
 console.log("")
 console.log(`-- ループ処理を飛ばす 途中で終了する -----------------`)
 array = [0, 1, 2, null, 4, 5, "end", 7]
 
 for (let index = 0; index < array.length; index++) {
-  const element = array[index];
+  const element = array[index]
   // nullだったら飛ばす
   if (element === null) {
     continue

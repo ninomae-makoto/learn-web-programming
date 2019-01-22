@@ -70,15 +70,15 @@ var scene = MAIN
 switch (scene) {
   case MAIN:
     console.log("MAINのシーン")
-    break;
+    break
   case SUB1:
     console.log("SUB1のシーン")
-    break;
+    break
   case SUB2:
     console.log("SUB2のシーン")
-    break;
+    break
 
   default:
     console.log("未定義のシーン")
-    break;
+    break
 }

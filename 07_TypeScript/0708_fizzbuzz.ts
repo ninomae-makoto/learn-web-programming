@@ -1,11 +1,11 @@
 
-var NUM = 100 + 1
+let NUM = 100 + 1
 
 console.log("")
 console.log(`-- case1 -----------------`)
 console.log(`素直な方法 おそらく一番見る`)
 
-for (var i = 1; i < NUM; i++) {
+for (let i = 1; i < NUM; i++) {
   if (i % 15 === 0) {
     console.log("fizzbuzz")
   } else if (i % 3 === 0) {
@@ -21,8 +21,8 @@ console.log("")
 console.log(`-- case2 -----------------`)
 console.log(`素直な方法2 ここまでは調べれば出てくる`)
 
-for (var i = 1; i < NUM; i++) {
-  var output = ""
+for (let i = 1; i < NUM; i++) {
+  let output = ""
   if (i % 3 === 0) {
     output += "fizz"
   }
@@ -42,17 +42,17 @@ console.log(`ルールを変数一つで表現しようというアプローチ`
 console.log(`ロジック上は最速候補で単純な計算だけならcase1の1/2倍、case2の1/30程度速い(出力処理が10000倍程度遅いので誤差の範囲)`)
 console.log(`1~15で一巡するのであらかじめ決めうちしておく 個人的にお気に入り`)
 
-var MAP = [
+let MAP = [
   "", "", "fizz", "", "buzz",
   "fizz", "", "", "fizz", "buzz",
   "", "fizz", "", "", "fizzbuzz",
 ]
 
-for (var i = 1; i < NUM; i++) {
-  var output = MAP[(i - 1) % 15]
+for (let i = 1; i < NUM; i++) {
+  let output = MAP[(i - 1) % 15]
 
   if (output === "") {
-    output = i
+    output = i.toString()
   }
   console.log(output)
 
@@ -63,12 +63,12 @@ console.log(`-- case4 -----------------`)
 console.log(`特に意味のない再帰と特に意味のないswitch 最遅の上NUMが多いと落ちる`)
 console.log(`一応マルチスレッドにも対応できる利点がある 例えばconsole.logがファイルの非同期出力でも(少し書き換えれば)正しく出力できる`)
 
-function fizzbuzz(n, end) {
+function fizzbuzz(n: number, end: number) {
 
   if (n === end) {
     return
   } else {
-    var temp = n % 15
+    const temp = n % 15
     switch (temp) {
       case 0:
         console.log("fizzbuzz")
@@ -87,7 +87,7 @@ function fizzbuzz(n, end) {
         break
 
       default:
-        console.log(n);
+        console.log(n)
         break
     }
     fizzbuzz(n + 1, end)

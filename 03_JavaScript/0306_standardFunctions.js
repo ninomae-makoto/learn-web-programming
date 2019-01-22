@@ -147,18 +147,18 @@ console.log(`-- JSON -----------------`)
 
 // object → json string
 console.log('JSON.stringify({ id: 0, name: "test" }: ' +
-  JSON.stringify({ id: 0, name: "test" }));
+  JSON.stringify({ id: 0, name: "test" }))
 
 // json string → object
 console.log(`JSON.parse('{"id":0,"name":"test"}').name): ` +
-  JSON.parse('{"id":0,"name":"test"}').name);
+  JSON.parse('{"id":0,"name":"test"}').name)
 
 
 console.log("")
 console.log(`-- Date -----------------`)
 
 // 現在時刻を取得 実行環境に依存する
-console.log("new Date():: " + new Date());
+console.log("new Date():: " + new Date())
 
 // 日付、時刻を指定してDateを取得 超過した場合は自動で繰り上げられる
 console.log("new Date(2020, 01, 02, 03, 04, 65): " + new Date(2020, 01, 02, 03, 04, 65))
@@ -219,13 +219,13 @@ console.log('Number("1234.56"): ' + Number("1234.56"))
 console.log('Number("asdf"): ' + Number("asdf"))
 
 // 最大値
-console.log("Number.MAX_VALUE: " + Number.MAX_VALUE);
+console.log("Number.MAX_VALUE: " + Number.MAX_VALUE)
 // 最小値
-console.log("Number.MIN_VALUE: " + Number.MIN_VALUE);
+console.log("Number.MIN_VALUE: " + Number.MIN_VALUE)
 // 整数で表現できる最大値
-console.log("Number.MAX_SAFE_INTEGER: " + Number.MAX_SAFE_INTEGER);
+console.log("Number.MAX_SAFE_INTEGER: " + Number.MAX_SAFE_INTEGER)
 // 整数で表現できる最小値
-console.log("Number.MIN_SAFE_INTEGER: " + Number.MIN_SAFE_INTEGER);
+console.log("Number.MIN_SAFE_INTEGER: " + Number.MIN_SAFE_INTEGER)
 
 
 console.log("")
@@ -239,16 +239,16 @@ console.log("isFinite('12s'): " + isFinite("12s"))
 console.log("isFinite(1 / 0): " + isFinite(1 / 0))
 
 // 文字列から浮動小数点数を返す
-console.log('parseFloat("4"): ' + parseFloat("4"));
-console.log('parseFloat("4.25"): ' + parseFloat("4.25"));
-console.log('parseFloat("5@"): ' + parseFloat("5@"));
-console.log('parseFloat("h4fg"): ' + parseFloat("h4fg"));
+console.log('parseFloat("4"): ' + parseFloat("4"))
+console.log('parseFloat("4.25"): ' + parseFloat("4.25"))
+console.log('parseFloat("5@"): ' + parseFloat("5@"))
+console.log('parseFloat("h4fg"): ' + parseFloat("h4fg"))
 
 // 文字列から整数を返す
-console.log('parseInt("4"): ' + parseInt("4"));
-console.log('parseInt("4.25"): ' + parseInt("4.25"));
-console.log('parseInt("5@"): ' + parseInt("5@"));
-console.log('parseInt("h4fg"): ' + parseInt("h4fg"));
+console.log('parseInt("4"): ' + parseInt("4"))
+console.log('parseInt("4.25"): ' + parseInt("4.25"))
+console.log('parseInt("5@"): ' + parseInt("5@"))
+console.log('parseInt("h4fg"): ' + parseInt("h4fg"))
 
 
 // アルファベット、10進数字、- _ . ! ~ * ' ( ) を除くすべての文字をエスケープする

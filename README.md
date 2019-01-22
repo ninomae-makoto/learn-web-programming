@@ -58,9 +58,10 @@ TODO: tasks.json について
 ライブラリに依存しないDOM操作について学ぶ
 
 ## 07_TypeScript
-型を導入してより安全に実装する。
+型を導入してより安全に実装する。  
 
-TODO: JavaScriptと比較できるように
+TODO: JavaScriptと比較できるように  
+TODO: class構文について  
 
 ## 08_Refactoring
 リファクタについて  
