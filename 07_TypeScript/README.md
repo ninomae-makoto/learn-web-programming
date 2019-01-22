@@ -99,10 +99,18 @@ node built/0706_standardFunctions.js
 ```
 
 # 0707_Promise
-JavaScriptとの違いを確認してみる。  
+JavaScriptとの違いを確認してみる。 
+
+```
+node built/0707_Promise.js
+``` 
 
 # 0708_fizzbuzz
-JavaScriptとの違いを確認してみる。  
+JavaScriptとの違いを確認してみる。 
+
+```
+node built/0708_fizzbuzz.js
+```  
 
 # 参考
 
