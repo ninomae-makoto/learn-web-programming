@@ -18,25 +18,25 @@ Visual Studio Code
 
 
 ## Backend
-Node.js
-TypeScript
-Express
+- Node.js
+- TypeScript
+- Express
 
 ## FrontEnd
-TypeScript
-Vue
-Element
-Webpack
+- TypeScript
+- Vue
+- Element
+- Webpack
 
-# カリキュラム的な
+# カリキュラム
 1~4あたりまでは飛ばしてもいい。  
-それ以上は前の章を前提にしている部分があるので順番に進めることを推奨。
+それ以降は前の章を前提にしている部分があるので順番に進めることを推奨。
 
 ## 00_Environment
 学習に当たって必要な環境を構築する
 
 ## 01_HTML
-HTMLについて
+HTMLについて  
 HTML5の記述方法について
 
 ## 02_CSS
@@ -46,11 +46,11 @@ CSSについて
 JavaScriptについて基本的な構文を学ぶ
 
 ## 04_Git
-分散型バージョン管理Gitについて学ぶ
+分散型バージョン管理Gitについて学ぶ  
 早めに作って壊せる環境を整える
 
 ## 05_VisualStudioCode
-エディタについて学ぶ
+エディタについて学ぶ  
 
 TODO: tasks.json について
 
@@ -60,7 +60,6 @@ TODO: tasks.json について
 ## 07_TypeScript
 型を導入してより安全に実装する。  
 
-TODO: JavaScriptと比較できるように  
 TODO: class構文について  
 
 ## 08_Refactoring
@@ -68,20 +67,20 @@ TODO: class構文について
 動作を変えずによりわかりやすい構造へと変更する
 
 ## 09_Lint
-構文チェックについて
+構文チェックについて  
 
 ## 10_CodingStandards
 コーディング規約について  
-所属組織によって変わるので飛ばしても良い
+所属組織によって変わるので飛ばしても良い  
 
 ## 11_Debugging
 VisualStudioCodeのデバッグ機能  
-Chromeの開発者ツールの機能
+Chromeの開発者ツールの機能  
 
 TODO: 未着手
 
 ## 12_UnitTest
-テストを書く
+テストを書く  
 
 TODO: 未着手
 
