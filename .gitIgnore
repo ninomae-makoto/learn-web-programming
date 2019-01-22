@@ -6,3 +6,4 @@ node_modules
 16_VueElement/*.js
 *.js.map
 !webpack.config.js
+built
