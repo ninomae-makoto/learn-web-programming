@@ -257,6 +257,58 @@ https://code.visualstudio.com/docs/editor/debugging
 設定したデバッグ構成で起動
 F5
 
+# tasks.jsonについて
+
+NPM Scriptで表現しにくい場合などに使用する(OSによって処理を切り替える場合など)  
+実行するときはF1 → タスクの実行から。Ctrl(Cmd) + O で最近使用したタスクを実行できる。  
+またタスクに関してはショートカットキーを割当てることができるのでウォッチやテスト、リリースが一発で可能になる。 
+
+以下は一例 
+
+```
+    {
+      "label": "test",
+      "type": "shell",
+      "windows": {
+        "command": "npm run wintest"
+      },
+      "osx": {
+        "command": "npm run mactest"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+```
+
+labelは一意の名前。ショートカットを指定するときなどに利用する。  
+windows,osx,linuxなどでcommandoをか囲むことでOSごとに処理を切り替えることが可能。  
+typeにはgrunt,gulp,tsc,npm,shell などが使用できる。  
+shellだと汎用性が高い。  
+groupはデフォルトのビルドコマンドであることを示している。kindにはbuildとtestが指定できる。  
+Ctrl(Cmd) + Shift + B でビルドタスクが実行される。  
+
+古い記事だと記述が違うので注意（バージョンが0.0.1→2.0.0に上がっている）  
+
+## タスクにショートカットを割り当てる
+
+keybindings.json を開く(Cmd + K, Cmd + S or Ctrl + K, Ctrl + S)
+
+```
+  {
+    "key": "shift+cmd+1",
+    "command": "workbench.action.tasks.runTask",
+    "args": "tadkname"
+  },
+```
+keyはショートカットコマンド  
+commandはタスクを示している  
+argsでtasks.jsonのlabelを指定する  
+
+https://code.visualstudio.com/docs/editor/tasks
+
 # その他
 ヘルプ → 対話型プレイグラウンド から実行しながら機能を確認できる。
 

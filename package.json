@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "mactest": "echo mac",
+    "wintest": "echo windows",
     "build_16": "webpack --mode development"
   },
   "author": "ninomae makoto",

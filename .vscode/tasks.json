@@ -4,6 +4,21 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "test",
+      "type": "shell",
+      "windows": {
+        "command": "npm run wintest"
+      },
+      "osx": {
+        "command": "npm run mactest"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "01_HTML",
       "type": "shell",
       "windows": {
@@ -13,6 +28,6 @@
         "command": "open 01_HTML/011_base.html"
       },
       "problemMatcher": []
-    }
+    },
   ]
 }
