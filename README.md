@@ -31,49 +31,74 @@ Visual Studio Code
 - Webpack
 
 # カリキュラム
+各章のREADEME.mdを参考に学習、実際に手を動かして動作確認していく。  
 1~4あたりまでは飛ばしてもいい。  
-それ以降は前の章を前提にしている部分があるので順番に進めることを推奨。
+それ以降は前の章を前提にしている部分があるので順番に進めることを推奨。  
+
+何から着手したらいいかわからない場合[00_Environment](00_Environment/README.md) から進めていく。
 
 ## 00_Environment
-学習に当たって必要な環境を構築する
+学習に当たって必要な環境を構築する  
+
+[00_Environment](00_Environment/README.md)
 
 ## 01_HTML
 HTMLについて  
-HTML5の記述方法について
+HTML5の記述方法について  
+
+[01_HTML](01_HTML/README.md)
 
 ## 02_CSS
-CSSについて
+CSSについて  
+
+[02_CSS](02_CSS/README.md)
 
 ## 03_JavaScript
-JavaScriptについて基本的な構文を学ぶ
+JavaScriptについて基本的な構文を学ぶ  
+
+[03_JavaScript](03_JavaScript/README.md)
 
 ## 04_Git
 分散型バージョン管理Gitについて学ぶ  
 早めに作って壊せる環境を整える
 
+[04_Git](04_Git/README.md)
+
 ## 05_VisualStudioCode
 エディタについて学ぶ  
 
-TODO: tasks.json について
+[05_VisualStudioCode](05_VisualStudioCode/README.md)
 
 ## 06_DOM
-ライブラリに依存しないDOM操作について学ぶ
+ライブラリに依存しないDOM操作について学ぶ  
+
+[06_DOM](06_DOM/README.md)
 
 ## 07_TypeScript
 型を導入してより安全に実装する。  
+
+[07_TypeScript](07_TypeScript/README.md)  
 
 TODO: class構文について  
 
 ## 08_Refactoring
 リファクタについて  
-動作を変えずによりわかりやすい構造へと変更する
+動作を変えずによりわかりやすい構造へと変更する  
+
+[08_Refactoring](08_Refactoring/README.md)  
+
+TODO: 具体例が欲しい  
 
 ## 09_Lint
 構文チェックについて  
 
+[09_Lint](09_Lint/README.md)  
+
 ## 10_CodingStandards
 コーディング規約について  
 所属組織によって変わるので飛ばしても良い  
+
+[10_CodingStandards](10_CodingStandards/README.md)  
 
 ## 11_Debugging
 VisualStudioCodeのデバッグ機能  
