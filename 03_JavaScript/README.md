@@ -223,9 +223,14 @@ node 03_JavaScript/0307_Promise.js
 
 # 0308_fizzbuzz
 JavaScriptでfizzbuzz  
-任意の与えられた数字をカウントしてコンソールへ出力する。  
-ただし3で割り切れる場合はfizz、5で割り切れる場合はbuzz、15で割り切れる場合はfizzbuzzと出力する。
+1から任意の与えられた数字までカウントしてコンソールへ出力する。  
+ただし3で割り切れる場合はfizz、5で割り切れる場合はbuzz、15で割り切れる場合はfizzbuzzと出力する。  
+サンプルを見る前に自分で実装してみる。  
 
+
+```
+node 03_JavaScript/0308_fizzbuzz_try.js
+```
 
 
 ```
