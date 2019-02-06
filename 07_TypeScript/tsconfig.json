@@ -4,11 +4,10 @@
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
     "lib": [
-      "dom",
       "es5",
       "es2015.promise"
     ]
