@@ -7,3 +7,5 @@ node_modules
 *.js.map
 !webpack.config.js
 built
+0709_class_0.ts
+0709_class_1.ts

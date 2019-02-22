@@ -231,7 +231,7 @@ node 07_TypeScript/built/0709_dateTime.js
 ## クラスを使わず日付処理をしてみる
 
 07_TypeScript/built/0709_dateTime.js
-と同じことを自分で実装してみる。
+と同じ機能を自分で実装してみる。
 できれば0709_dateTime.tsを参照せずに実装して見てほしい。
 
 1. 現在日付をyyyy/MM/dd形式で表示する
@@ -247,6 +247,69 @@ node 07_TypeScript/built/0709_dateTime.js
 
 - toStringメソッドが時分秒:hhmmssに対応できるようにする
 - addHour, addMinute, addSecondを実装する
+
+# 演習
+
+## 1~nまで合計した値を表示する
+
+07_TypeScript/0710_practice_1.ts に実装してみる。
+
+解答例は 07_TypeScript/0710_practice_1_example.ts
+
+```
+node 07_TypeScript/built/0710_practice_1_example.js
+```
+
+
+## 配列の値を全て合計した結果を表示する
+
+
+07_TypeScript/0710_practice_2.ts に実装してみる。
+
+解答例は 07_TypeScript/0710_practice_2_example.ts
+
+```
+node 07_TypeScript/built/0710_practice_2_example.js
+```
+
+## 配列を反転する
+
+07_TypeScript/0710_practice_3.ts に実装してみる。
+
+解答例は 07_TypeScript/0710_practice_3_example.ts
+
+```
+node 07_TypeScript/built/0710_practice_3_example.js
+```
+
+## 0〜100まで100個のユニークな数値が入っている要素数100の配列を作成する
+
+
+07_TypeScript/0710_practice_4.ts に実装してみる。
+
+以下出力例  
+0~100のうち25が入っていない。
+
+```
+[ 50,  80,  38,  37,  32,  98,  44,  55,  72,  51,  29,  83,  89,  52,  40,  84,  11,  15,  35,  39,  58,  64,  93,  59,  75,  41,  45,  63,  12,  71,  94,  7,  68,  23,  49,  61,  4,  70,  77,  78,  91,  81,  79,  76,  30,  85,  14,  100,  66,  9,  16,  46,  20,  48,  86,  97,  96,  92,  5,  42,  18,  95,  10,  54,  22,  62,  31,  21,  36,  43,  34,  87,  27,  1,  53,  73,  0,  57,  24,  56,  90,  60,  6,  67,  74,  2,  47,  65,  3,  13,  99,  28,  82,  8,  26,  69,  19,  88,  17,  33 ]
+```
+
+解答例は 07_TypeScript/0710_practice_4_example.ts
+
+```
+node 07_TypeScript/built/0710_practice_4_example.js
+```
+
+## 0〜100まで100個のユニークな数値が入っている配列から、一つ配列にない値を探す 5050
+
+07_TypeScript/0710_practice_5.ts に実装してみる。
+
+解答例は 07_TypeScript/0710_practice_5_example.ts
+
+```
+node 07_TypeScript/built/0710_practice_5_example.js
+```
+
 
 # 参考
 
