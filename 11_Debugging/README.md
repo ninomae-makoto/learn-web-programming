@@ -130,7 +130,7 @@ debug.jsを開いてF5を押して確認してみる。
 ブレイクポイントを右クリック→ブレイクポイントの編集から止める条件を設定できる。
 処理を止めている間は値の確認、書き換えが可能。
 
-![ブレイクポイント](cap/vscode1.PNG)
+![ブレイクポイント](cap/vscode1.png)
 
 
 ## ウォッチ
@@ -138,7 +138,7 @@ debug.jsを開いてF5を押して確認してみる。
 処理を止めている間、任意の式を実行確認できる。  
 デバッグコンソールでも同様のことが可能。  
 
-![ウォッチ](cap/vscode2.PNG)
+![ウォッチ](cap/vscode2.png)
 
 
 ## console.log
@@ -174,7 +174,7 @@ Ctrl(Cmd) + F でHTML内の検索。
 - Delete element → 削除
 など
 
-![Chrome1](cap/chrome1.PNG)
+![Chrome1](cap/chrome1.png)
 
 
 ### Styles
@@ -204,14 +204,14 @@ elementに付与されているイベントリスナを確認する。
 js, cssを確認できる。  
 ブレイクポイントを貼ることも可能。  
 
-![Chrome11](cap/chrome11.PNG)
+![Chrome11](cap/chrome11.png)
 
 
 ### Snippets
 Sources → Snippets からコードスニペットが作成できる。  
 補完、デバッグ実行、保存(おそらくデバイス単位)が可能。  
 
-![Chrome2](cap/chrome2.PNG)
+![Chrome2](cap/chrome2.png)
 
 ### Watch
 式の評価。  
@@ -226,19 +226,19 @@ Sources → Snippets からコードスニペットが作成できる。
 通信の確認。取得ファイル確認。通信パフォーマンス確認。  
 ヘッダ情報とレスポンス情報の確認。  
 
-![Chrome6](cap/chrome6.PNG)
+![Chrome6](cap/chrome6.png)
 
 
 ## Performance
 任意の期間におpけるパフォーマンスを測ることができる。  
 レコードCtrl(Cmd) + E で計測を開始する。
 
-![Chrome7](cap/chrome7.PNG)
+![Chrome7](cap/chrome7.png)
 
 ## Memory
 メモリ使用量確認。
 
-![Chrome8](cap/chrome8.PNG)
+![Chrome8](cap/chrome8.png)
 
 ## Application
 Manifest確認。Service Worker確認。キャッシュの削除。  
@@ -249,7 +249,7 @@ Manifest確認。Service Worker確認。キャッシュの削除。
 パフォーマンス、PWA対応状況、SEO、改善点などが確認できる。  
 特にパフォーマンスとSEOは便利（デバッグとはあまり関係ないが）  
 
-![Chrome9](cap/chrome9.PNG)
+![Chrome9](cap/chrome9.png)
 
 ## Rendering
 Hide Console Drawer(Esc) → ハンバーガーメニューから  
@@ -257,14 +257,14 @@ Hide Console Drawer(Esc) → ハンバーガーメニューから
 FPS, css mediaの変更(orint, screen)  
 ウェブ帳票を作成するときなどに。  
 
-![Chrome3](cap/chrome3.PNG)
+![Chrome3](cap/chrome3.png)
 
 
 ## Search
 Hide Console Drawer(Esc) → ハンバーガーメニューから  
 HTMLやファイルから検索。  
 
-![Chrome4](cap/chrome4.PNG)
+![Chrome4](cap/chrome4.png)
 
 ## Sensors
 位置情報エミュレート。  
@@ -273,13 +273,13 @@ HTMLやファイルから検索。
 ## Coverage
 jsの実行されたコードの割合が表示される。  
 
-![Chrome5](cap/chrome5.PNG)
+![Chrome5](cap/chrome5.png)
 
 ## Network conditions
 通信速度のエミュレート。  
 通信環境が悪い状態で動作確認できる。  
 
-![Chrome10](cap/chrome10.PNG)
+![Chrome10](cap/chrome10.png)
 
 ## その他
 機能が多過ぎて説明しきれない。
