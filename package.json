@@ -4,19 +4,26 @@
   "description": "フロント周りを中心に学習する",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mactest": "echo mac",
-    "wintest": "echo windows",
-    "build_16": "webpack --mode development"
+    "test": "mocha",
+    "mactest": "echo \"mac\"",
+    "wintest": "echo \"windows\"",
+    "hello": "echo \"Hello NPM Script!!\"",
+    "build_16": "webpack --mode development",
+    "deploy": "node release.js",
+    "list": "npm ls --depth=0",
+    "log": "git log -n 30 --format='%cd %s' --date=format:'%y/%m/%d %H:%M:%S' --no-merges | sort > commitlog.txt"
   },
   "author": "ninomae makoto",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "mocha": "^6.0.2",
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "@types/mocha": "^5.2.6",
     "@types/node": "^10.12.19",
     "css-loader": "^1.0.0",
+    "nyc": "^13.3.0",
     "thread-loader": "^1.2.0",
     "ts-loader": "^4.4.2",
     "tslint": "^5.11.0",
