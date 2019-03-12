@@ -104,7 +104,7 @@ TODO: 具体例が欲しい
 VisualStudioCodeのデバッグ機能  
 Chromeの開発者ツールの機能  
 
-TODO: 未着手
+TODO: 具体例が欲しい  
 
 ## 12_UnitTest
 テストを書く  
@@ -112,8 +112,7 @@ TODO: 未着手
 TODO: 未着手
 
 ## 13_NPMScript
-
-TODO: 未着手
+ビルド、テスト、リリースを単純なスクリプトで自動化する。  
 
 ## 14_Webpack
 
