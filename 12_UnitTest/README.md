@@ -162,11 +162,12 @@ Fibonacchiクラスそのものが存在しないのでテストに失敗する�
 
 ### 最速でテストを通す
 
-クラスと関数を用意してテストを通す
+クラスと関数を用意してテストを通す。  
+1203_fibonacci.ts を参照。  
 
 ```
 
-export class Fibonacci1203 {
+export class Fibonacci {
   /**
    * n番目のフィボナッチ数を返す
    * @param n
@@ -183,7 +184,8 @@ npx nyc mocha 12_UnitTest/built/1203_fibonacci_test.js
 
 ### テストケースを追加する
 
-n=1のテストケースを追加して実装する。
+1204_fibonacci.ts を参照。  
+n=1のテストケースを追加して実装する。  
 フィボナッチ数は https://keisan.casio.jp/exec/system/1161228773 から計算できる。
 
 ```
@@ -200,7 +202,8 @@ npx nyc mocha 12_UnitTest/built/1204_fibonacci_test.js
 
 ### テストケースを更に追加する
 
-n=2,3,4のテストケースを追加して実装する。
+1205_fibonacci.ts を参照。  
+n=2,3,4のテストケースを追加して実装する。  
 
 ``` ts
 public static calc(n: number) {
@@ -222,6 +225,7 @@ npx nyc mocha 12_UnitTest/built/1205_fibonacci_test.js
 
 ### 実装を見直す
 
+1206_fibonacci.ts を参照。  
 そもそもフィボナッチ数とはなんだったか改めて確認してみる。  
 https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0
 0番目が0、1番目が1、以降は直前の2つの値の和になる。
@@ -248,6 +252,7 @@ npx nyc mocha 12_UnitTest/built/1206_fibonacci_test.js
 
 ### n=2以降が通るように書き換える
 
+1207_fibonacci.ts を参照。  
 n=2以降はF(n)=F(n-2)+F(n-1)で表される。  
 これをプログラムで表現する。  
 
