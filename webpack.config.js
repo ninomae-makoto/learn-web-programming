@@ -4,10 +4,10 @@ const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
   entry: {
-    template: './16_Vue/1601_helloVue/1601_hello.ts',
+    template: './15_Vue/1502_VueTypeScript/main.ts',
   },
   output: {
-    path: path.resolve(__dirname, './16_Vue/1601_helloVue'),
+    path: path.resolve(__dirname, './16_Vue/1502_VueTypeScript'),
     publicPath: '/built/',
     filename: 'main.js'
   },

@@ -8,7 +8,7 @@
     "mactest": "echo \"mac\"",
     "wintest": "echo \"windows\"",
     "hello": "echo \"Hello NPM Script!!\"",
-    "build_16": "webpack --mode development",
+    "build_15": "webpack --mode development",
     "deploy": "node release.js",
     "list": "npm ls --depth=0",
     "log": "git log -n 30 --format='%cd %s' --date=format:'%y/%m/%d %H:%M:%S' --no-merges | sort > commitlog.txt"
