@@ -109,21 +109,18 @@ TODO: 具体例が欲しい
 ## 12_UnitTest
 テストを書く  
 
-TODO: 未着手
-
 ## 13_NPMScript
 ビルド、テスト、リリースを単純なスクリプトで自動化する。  
 
 ## 14_Webpack
 
-TODO: 未着手
+TODO: mode, Entry, Loader
 
 ## 15_Vue
 JavaScriptのUIフレームワークについて
 
 ## 16_VueElement
-
-TODO: 未着手
+UIコンポーネント
 
 ## 17_GuiTest(Karma)
 Karmaを使用して画面のテストを行う
