@@ -122,10 +122,10 @@ JavaScriptのUIフレームワークについて
 ## 16_VueElement
 UIコンポーネント
 
-## 17_GuiTest(Karma)
-Karmaを使用して画面のテストを行う
+## 17_GuiTest(vue/test-utils)
+vue/test-utilsを使用して画面のテストを行う
 
-TODO: 未着手
+TODO: 情報を増やす。  
 
 ## 18_Node.js&Express
 サーバサイドについて
