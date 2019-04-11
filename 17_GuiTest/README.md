@@ -95,9 +95,11 @@ describe("App.vue", () => {
 ボタンのクリックをシュミレートして、押下前、押下後の値を確認している。
 
 
-# vue.web.config
+# vue.config.js
 
-Vueを外部化しているとエラーになる。後で確認。  
+Vueを外部化しているとエラーになる。  
+本番とテストでパスを呼び分けるようにするといい。  
+package.json→scriptsのbuild:dev, build:prod 参照。  
 
 # 参考
 https://vue-test-utils.vuejs.org/

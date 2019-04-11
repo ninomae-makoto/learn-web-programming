@@ -1,6 +1,6 @@
-import App from "@/App.vue"
 import { shallowMount } from "@vue/test-utils"
 import { expect } from "chai"
+import App from "./../../src/App.vue"
 
 describe("App.vue", () => {
   it("ボタンを押したときにカウントされることを確認する", () => {
