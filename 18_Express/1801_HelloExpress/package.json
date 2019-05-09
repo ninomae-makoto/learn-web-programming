@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve  --webpack-config vue.prod.config.js",
-    "build": "vue-cli-service build --webpack-config vue.prod.config.js",
+    "start": "node app.js",
+    "serve": "vue-cli-service serve  --webpack-config vue.test.config.js",
+    "build": "vue-cli-service build --webpack-config vue.test.config.js",
     "build:dev": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.js vue-cli-service build",
     "build:prod": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.prod.config.js vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit --webpack-config vue.config.js"
+    "test:unit": "vue-cli-service test:unit --webpack-config vue.test.config.js"
   },
   "dependencies": {
     "element-ui": "^2.7.2",
+    "express": "^4.16.4",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^8.0.0"

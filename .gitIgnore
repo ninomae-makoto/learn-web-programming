@@ -4,6 +4,7 @@ node_modules
 07_TypeScript/*.js
 15_Vue/*.js
 16_VueElement/*.js
+18_Express/**/dist
 *.js.map
 !webpack.config.js
 built
