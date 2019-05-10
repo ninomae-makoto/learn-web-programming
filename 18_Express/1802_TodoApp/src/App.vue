@@ -23,6 +23,7 @@
 
 <script lang="ts">
 // import lang from "element-ui"
+import axios from "axios"
 import ElementUI from "element-ui"
 // import locale from "element-ui/lib/locale/lang/ja"
 import Vue from "vue"
@@ -37,6 +38,14 @@ interface DataModel {
 
 export default Vue.extend({
   name: "app",
+  mounted() {
+    axios({
+      method: "get",
+      url: "/task",
+    }).then((response) => {
+      console.log(response.data)
+    })
+  },
   data() {
     return {
       tasks: [
@@ -56,6 +65,19 @@ export default Vue.extend({
               completed: false,
             })
             this.maxID++
+
+            axios({
+              method: "post",
+              url: "/task",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              data: {
+                src: {},
+              },
+            }).then((response) => {
+              console.log(response.data)
+            })
           }
         },
       })
@@ -65,6 +87,19 @@ export default Vue.extend({
       for (let i = 0; i < this.tasks.length; i++) {
         if (this.tasks[i].id === taskID) {
           this.tasks.splice(i, 1)
+          axios({
+            method: "put",
+            url: "/task",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            data: {
+              src: {},
+            },
+          }).then((response) => {
+            console.log(response.data)
+          })
+          break
         }
       }
     },
@@ -72,6 +107,19 @@ export default Vue.extend({
       for (let i = 0; i < this.tasks.length; i++) {
         if (this.tasks[i].id === taskID) {
           this.tasks.splice(i, 1)
+          axios({
+            method: "delete",
+            url: "/task",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            data: {
+              src: {},
+            },
+          }).then((response) => {
+            console.log(response.data)
+          })
+          break
         }
       }
     },

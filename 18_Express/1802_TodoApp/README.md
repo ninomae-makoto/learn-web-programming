@@ -197,11 +197,78 @@ remove(taskID: number) {
 - 削除したタイミングでテキストから削除する
 - 完了した場合別途完了ずみのテキストファイルへ移動する
 
+### サーバとクライアントがやり取りするためのガワを作成する
+
+#### サーバ
+
+``` js
+app.route('/task')
+  // タスク一覧を取得する
+  .get(function (req, res) {
+    // TODO
+    res.send('Get tasks');
+  })
+  // タスクを追加する
+  .post(function (req, res) {
+    // TODO
+    res.send('Add task');
+  })
+  // タスクを更新する
+  .put(function (req, res) {
+    // TODO
+    res.send('Update task');
+  })
+  // タスクを削除する
+  .delete(function (req, res) {
+    // TODO
+    res.send('Delete task');
+  })
+
+```
+
+/task にhttpリクエストを送信した時に処理を行う（予定）
+
+#### クライアント
+
+``` ts
+  mounted() {
+    axios({
+      method: "get",
+      url: "/task",
+    }).then((response) => {
+      console.log(response.data)
+    })
+  },
+  ```
+
+  マウント時にタスク一覧を取得する
+
+  ``` ts
+  axios({
+    method: "post",
+    url: "/task",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: {
+      src: {},
+    },
+  }).then((response) => {
+    console.log(response.data)
+  })
+  ```
+  methodに"post", "put", "delete"を指定して処理を切り替える
+
+### 中身を作り込んでいく
+
+#### タスク追加処理
+
 ## やってみる
 
 - タスクに着手しているのがわかるようにしたい
 - タスクを並べ替えたい
 - テキストに保存しているタスクをDBに保存するようにする
+- タスクを編集できるようにしたい
 - 現状アプリケーション一つでタスクを共用しているので分けられるようにする
 
 # 参考
