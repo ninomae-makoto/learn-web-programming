@@ -2,16 +2,16 @@
   <div id="app">
     <h1>Todo App</h1>
     <ul>
-      <li v-for="datum in data" :key="datum.id">
+      <li v-for="task in tasks" :key="task.id">
         <el-row>
           <el-col :span="18">
             <div class="todo_content">
-              <span>{{ datum.text }}</span>
+              <span>{{ task.text }}</span>
             </div>
           </el-col>
           <el-col :span="6">
-            <el-button>Done</el-button>
-            <el-button>Delete</el-button>
+            <el-button @click="done(task.id)">Done</el-button>
+            <el-button @click="remove(task.id)">Delete</el-button>
           </el-col>
           <hr>
         </el-row>
@@ -37,25 +37,43 @@ interface DataModel {
 
 export default Vue.extend({
   name: "app",
-  components: {
-    // HelloWorld,
-  },
   data() {
     return {
-      data: [
-        { id: 0, text: "example1", completed: false },
-        { id: 1, text: "example2", completed: false },
-        { id: 2, text: "example3", completed: false },
+      tasks: [
       ] as DataModel[],
+
+      maxID: 0,
     }
   },
   methods: {
     addTask() {
       this.$prompt("タスクの追加", {
-        callback: (action) => {
-          //
+        callback: (action, instance) => {
+          if (action === "confirm" && instance.inputValue) {
+            this.tasks.push({
+              id: this.maxID,
+              text: instance.inputValue,
+              completed: false,
+            })
+            this.maxID++
+          }
         },
       })
+    },
+
+    done(taskID: number) {
+      for (let i = 0; i < this.tasks.length; i++) {
+        if (this.tasks[i].id === taskID) {
+          this.tasks.splice(i, 1)
+        }
+      }
+    },
+    remove(taskID: number) {
+      for (let i = 0; i < this.tasks.length; i++) {
+        if (this.tasks[i].id === taskID) {
+          this.tasks.splice(i, 1)
+        }
+      }
     },
   },
 })

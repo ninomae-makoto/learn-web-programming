@@ -5,9 +5,11 @@
   "scripts": {
     "start": "node app.js",
     "serve": "vue-cli-service serve  --webpack-config vue.prod.config.js",
-    "build": "vue-cli-service build --webpack-config vue.prod.config.js",
+    "build": "vue-cli-service build --webpack-config vue.prod.config.js --watch",
     "build:dev": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.js vue-cli-service build",
     "build:prod": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.prod.config.js vue-cli-service build",
+    "watch:dev": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.config.js vue-cli-service build --watch",
+    "watch:prod": "VUE_CLI_SERVICE_CONFIG_PATH=$PWD/vue.prod.config.js vue-cli-service build --watch",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
