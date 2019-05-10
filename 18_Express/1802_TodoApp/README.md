@@ -263,13 +263,112 @@ app.route('/task')
 
 #### タスク追加処理
 
-## やってみる
+サーバ
+
+``` js
+  .post(function (req, res) {
+    // console.log(req.body);
+    const task = req.body.src
+    const data = task.id + "\t" + task.text + "\t" + task.completed + "\n"
+
+    const directory = "data"
+    fs.mkdir(directory, function (err) {
+      fs.appendFile(directory + "/task.tsv", data, function (err) {
+        if (err) {
+          throw err;
+        }
+      });
+    });
+
+    res.send('Add task');
+  })
+```
+
+フロント
+
+``` ts
+const task = {
+  id: this.maxID,
+  text: instance.inputValue,
+  completed: false,
+}
+this.tasks.push(task)
+this.maxID++
+
+axios({
+  method: "post",
+  url: "/task",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  data: {
+    src: task,
+  },
+}).then((response) => {
+  console.log(response.data)
+})
+```
+
+#### タスク読み込み処理
+
+サーバ
+
+``` js
+
+  // タスク一覧を取得する
+  .get(function (req, res) {
+    // TODO
+    fs.readFile("data/task.tsv", 'utf8', function (err, data) {
+
+      const tasks = []
+      if (!err) {
+        const list = data.split("\n")
+        list.forEach((line) => {
+          const task = line.split("\t")
+          if (task.length === 3) {
+            tasks.push({
+              id: task[0],
+              text: task[1],
+              completed: task[2],
+            })
+          }
+        })
+      }
+
+      res.send(tasks);
+    });
+  })
+```
+
+フロント
+
+``` ts
+  mounted() {
+    axios({
+      method: "get",
+      url: "/task",
+    }).then((response) => {
+      response.data.forEach((datum: DataModel) => {
+        this.tasks.push(datum)
+      })
+      this.maxID = this.tasks[this.tasks.length - 1].id + 1
+    })
+  },
+```
+
+
+#### タスク削除処理
+
+#### タスク完了処理
+
+# やってみる
 
 - タスクに着手しているのがわかるようにしたい
 - タスクを並べ替えたい
 - テキストに保存しているタスクをDBに保存するようにする
 - タスクを編集できるようにしたい
 - 現状アプリケーション一つでタスクを共用しているので分けられるようにする
+- 通信時エラーが発生した時の処理を追加する
 
 # 参考
 

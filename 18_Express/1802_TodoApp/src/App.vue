@@ -43,7 +43,10 @@ export default Vue.extend({
       method: "get",
       url: "/task",
     }).then((response) => {
-      console.log(response.data)
+      response.data.forEach((datum: DataModel) => {
+        this.tasks.push(datum)
+      })
+      this.maxID = this.tasks[this.tasks.length - 1].id + 1
     })
   },
   data() {
@@ -59,11 +62,12 @@ export default Vue.extend({
       this.$prompt("タスクの追加", {
         callback: (action, instance) => {
           if (action === "confirm" && instance.inputValue) {
-            this.tasks.push({
+            const task = {
               id: this.maxID,
               text: instance.inputValue,
               completed: false,
-            })
+            }
+            this.tasks.push(task)
             this.maxID++
 
             axios({
@@ -73,7 +77,7 @@ export default Vue.extend({
                 "Content-Type": "application/json",
               },
               data: {
-                src: {},
+                src: task,
               },
             }).then((response) => {
               console.log(response.data)
