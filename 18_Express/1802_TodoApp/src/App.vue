@@ -46,7 +46,9 @@ export default Vue.extend({
       response.data.forEach((datum: DataModel) => {
         this.tasks.push(datum)
       })
-      this.maxID = this.tasks[this.tasks.length - 1].id + 1
+      if (this.tasks.length !== 0) {
+        this.maxID = this.tasks[this.tasks.length - 1].id + 1
+      }
     })
   },
   data() {
@@ -90,6 +92,7 @@ export default Vue.extend({
     done(taskID: number) {
       for (let i = 0; i < this.tasks.length; i++) {
         if (this.tasks[i].id === taskID) {
+          const task = this.tasks[i]
           this.tasks.splice(i, 1)
           axios({
             method: "put",
@@ -98,7 +101,7 @@ export default Vue.extend({
               "Content-Type": "application/json",
             },
             data: {
-              src: {},
+              task: task,
             },
           }).then((response) => {
             console.log(response.data)
@@ -114,11 +117,8 @@ export default Vue.extend({
           axios({
             method: "delete",
             url: "/task",
-            headers: {
-              "Content-Type": "application/json",
-            },
             data: {
-              src: {},
+              taskid: taskID,
             },
           }).then((response) => {
             console.log(response.data)

@@ -27,6 +27,7 @@ http://localhost:3000 へアクセス
 - TODOの追加、変更、削除ができるようにする
 - TODOはとりあえずテキストで保持するようにする
 
+---
 ## モックアップを作成する
 
 ``` html
@@ -124,8 +125,8 @@ li .el-button {
 
 ![mock](./img/mock.png)
 
+---
 ## ローカルで動作するように作り込む
-
 
 ### TODOを追加する
 
@@ -187,8 +188,10 @@ remove(taskID: number) {
 },
 ```
 
-
+---
 ## サーバ側を作り込む(保存機能を作成する)
+
+app.jsを開いてフォーカスをあててF5を押すことでデバッグできる。 　
 
 ### 仕様
 
@@ -197,6 +200,7 @@ remove(taskID: number) {
 - 削除したタイミングでテキストから削除する
 - 完了した場合別途完了ずみのテキストファイルへ移動する
 
+---
 ### サーバとクライアントがやり取りするためのガワを作成する
 
 #### サーバ
@@ -259,6 +263,27 @@ app.route('/task')
   ```
   methodに"post", "put", "delete"を指定して処理を切り替える
 
+axiosを使用するために
+index.html へ
+
+``` html
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+```
+
+を追記して
+
+vue.config.js へ
+
+``` js
+config.externals({
+  "axios": "axios",
+  // ...
+})
+```
+
+を追記する。
+
+---
 ### 中身を作り込んでいく
 
 #### タスク追加処理
@@ -359,7 +384,88 @@ axios({
 
 #### タスク削除処理
 
+サーバー
+
+``` js
+  // タスクを削除する
+  .delete(function (req, res) {
+    const taskID = req.body.taskid
+    fs.readFile("data/task.tsv", 'utf8', function (err, readedData) {
+
+      const tasks = ""
+      if (!err) {
+        const list = readedData.split("\n")
+        list.forEach((line) => {
+          const task = line.split("\t")
+          if (task.length === 3 && task[0] !== taskID) {
+            tasks += line + "\n"
+          }
+
+        })
+        fs.writeFile("data/task.tsv", tasks, function (err) {
+          res.send("Deleted.");
+        })
+      }
+
+    });
+  })
+```
+
+フロント
+
+``` ts
+    remove(taskID: number) {
+      for (let i = 0; i < this.tasks.length; i++) {
+        if (this.tasks[i].id === taskID) {
+          this.tasks.splice(i, 1)
+          axios({
+            method: "delete",
+            url: "/task",
+            data: {
+              taskid: taskID,
+            },
+          }).then((response) => {
+            console.log(response.data)
+          })
+          break
+        }
+      }
+    },
+```
+
 #### タスク完了処理
+
+``` js
+  // タスクを更新する
+  .put(function (req, res) {
+    const task = req.body.task
+
+    fs.appendFile(directory + "/done.tsv", `${task.id}\t${task.text}\t${task.completed}\n`, function (err) {
+      if (err) {
+        console.log(err);
+      }
+    });
+
+    fs.readFile("data/task.tsv", 'utf8', function (err, readedData) {
+
+      const tasks = ""
+      if (!err) {
+        const list = readedData.split("\n")
+        list.forEach((line) => {
+          const task = line.split("\t")
+          if (task.length === 3 && task[0] !== taskID) {
+            tasks += line + "\n"
+          }
+
+        })
+        fs.writeFile("data/task.tsv", tasks, function (err) {
+          res.send("Deleted.");
+        })
+      }
+
+    });
+  })
+```
 
 # やってみる
 
@@ -368,7 +474,8 @@ axios({
 - テキストに保存しているタスクをDBに保存するようにする
 - タスクを編集できるようにしたい
 - 現状アプリケーション一つでタスクを共用しているので分けられるようにする
-- 通信時エラーが発生した時の処理を追加する
+- 通信時エラーが発生した時の処理を追加する(取得失敗、追加失敗,etc...)
+- 完了済みのタスクを画面から確認できるようにする
 
 # 参考
 
