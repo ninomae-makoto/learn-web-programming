@@ -215,7 +215,37 @@ Array.slice() // 配列にコピー
 
 # 0307_Promise
 非同期処理。  
-IE11が対応していないのでブラウザでは使用しない(polyfillは使用しない方針)
+callback処理を少し使いやすくしたもの。  
+主に失敗時の処理が書きやすくなる。  
+
+例えば以下のような関数は複数回呼び出したときに実行順序が保証されない。
+
+``` js
+function func1(arg) {
+  setTimeout(() => {
+    console.log(arg)
+  }, Math.random() * 100)
+}
+```
+
+Promise(とasync/await)を使用することで比較的簡単に非同期処理を記述できる。
+
+``` js
+async function func2(arg) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(arg)
+      resolve()
+    }, Math.random() * 10)
+  })
+}
+Promise.resolve().then(async function () {
+  for (let index = 0; index < 30; index++) {
+    // 終了するまで待つ
+    await func2(index)
+  }
+})
+```
 
 ```
 node 03_JavaScript/0307_Promise.js
